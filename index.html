@@ -1,1 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deivisnan Bispo - Portfólio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Colors */
+        :root {
+            --color-dark-green: #006400;
+            --color-light-green: #32CD32;
+            --color-black: #000000;
+            --color-white: #FFFFFF;
+        }
+
+        .bg-dark-green { background-color: var(--color-dark-green); }
+        .text-dark-green { color: var(--color-dark-green); }
+        .border-dark-green { border-color: var(--color-dark-green); }
+
+        .bg-light-green { background-color: var(--color-light-green); }
+        .text-light-green { color: var(--color-light-green); }
+        .border-light-green { border-color: var(--color-light-green); }
+
+        .bg-black { background-color: var(--color-black); }
+        .text-black { color: var(--color-black); }
+
+        .bg-white { background-color: var(--color-white); }
+        .text-white { color: var(--color-white); }
+        /* Custom Font */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+
+        /* Smooth scroll for navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-dark-green);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-light-green);
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <!-- Header Fixo -->
+    <header class="fixed top-0 left-0 w-full bg-black bg-opacity-90 text-white shadow-lg z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#inicio" class="text-2xl font-bold text-light-green hover:text-white transition duration-300">Deivisnan Bispo</a>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#inicio" class="hover:text-light-green transition duration-300">Início</a></li>
+                <li><a href="#sobre" class="hover:text-light-green transition duration-300">Sobre</a></li>
+                <li><a href="#habilidades" class="hover:text-light-green transition duration-300">Habilidades</a></li>
+                <li><a href="#experiencia" class="hover:text-light-green transition duration-300">Experiência</a></li>
+                <li><a href="#projetos" class="hover:text-light-green transition duration-300">Projetos</a></li>
+                <li><a href="#contato" class="hover:text-light-green transition duration-300">Contato</a></li>
+                <li><a href="Currículo Deivisnan Bispo 2025.pdf" target="_blank" class="hover:text-light-green transition duration-300">Currículo</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90 w-full py-4 text-center">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="#inicio" class="block py-2 hover:text-light-green transition duration-300">Início</a></li>
+                <li><a href="#sobre" class="block py-2 hover:text-light-green transition duration-300">Sobre</a></li>
+                <li><a href="#habilidades" class="block py-2 hover:text-light-green transition duration-300">Habilidades</a></li>
+                <li><a href="#experiencia" class="block py-2 hover:text-light-green transition duration-300">Experiência</a></li>
+                <li><a href="#projetos" class="block py-2 hover:text-light-green transition duration-300">Projetos</a></li>
+                <li><a href="#contato" class="block py-2 hover:text-light-green transition duration-300">Contato</a></li>
+                <li><a href="Currículo Deivisnan Bispo 2025.pdf" target="_blank" class="block py-2 hover:text-light-green transition duration-300">Currículo</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="relative h-80 flex items-center justify-center bg-black text-white overflow-hidden">
+            <!-- Removido o background-image com texto, agora é apenas preto -->
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div class="relative z-10 text-center px-6">
+                <!-- Removido o h1 com o texto principal -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#projetos" class="bg-light-green text-black font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-dark-green hover:text-white transition duration-300 transform hover:scale-105">
+                        Ver Projetos
+                    </a>
+                    <a href="Currículo Deivisnan Bispo 2025.pdf" target="_blank" class="border-2 border-light-green text-light-green font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-light-green hover:text-black transition duration-300 transform hover:scale-105">
+                        Baixar Currículo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mim Section -->
+        <section id="sobre" class="py-16 md:py-24 bg-white text-black">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="md:w-1/3 flex justify-center">
+                    <img src="https://raw.githubusercontent.com/Deivisnan/Pagina_da_liga_LIAO/51cbfe1b48ee77b1c833ea0c01d516af17152e5c/Liao_membros/deivisnan.jpg" alt="Deivisnan" class="rounded-full shadow-lg border-4 border-light-green transform hover:scale-105 transition duration-300">
+                </div>
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h2 class="text-4xl font-bold mb-6 text-dark-green">Sobre Mim</h2>
+                    <p class="text-lg leading-relaxed mb-4">
+                        Estudante na UFBA, com experiência prática em desenvolvimento web, suporte técnico e participação em projetos acadêmicos voltados à pesquisa e extensão. Atuo com tecnologias como React, JavaScript, HTML, CSS, Python, C++ e SQL.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Minha paixão por tecnologia me impulsiona a buscar constantemente novos conhecimentos e desafios, contribuindo para soluções inovadoras e eficientes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades Técnicas (Hard Skills) Section -->
+        <section id="habilidades" class="py-16 md:py-24 bg-gray-100 text-black">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-dark-green">Habilidades Técnicas</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Linguagens -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-2xl font-semibold mb-4 text-light-green"><i class="fas fa-code mr-3"></i>Linguagens</h3>
+                        <ul class="list-disc list-inside text-lg space-y-2">
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <!-- Ferramentas -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-2xl font-semibold mb-4 text-light-green"><i class="fas fa-tools mr-3"></i>Ferramentas</h3>
+                        <ul class="list-disc list-inside text-lg space-y-2">
+                            <li>GitHub</li>
+                            <li>Excel</li>
+                            <li>SQL</li>
+                            <li>Arduino</li>
+                        </ul>
+                    </div>
+                    <!-- Tecnologias -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-2xl font-semibold mb-4 text-light-green"><i class="fas fa-laptop-code mr-3"></i>Tecnologias</h3>
+                        <ul class="list-disc list-inside text-lg space-y-2">
+                            <li>React</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Canva</li>
+                            <li>Modelagem 3D</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-4xl font-bold text-center mt-16 mb-12 text-dark-green">Soft Skills</h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-light-green text-black px-6 py-3 rounded-full shadow-md hover:bg-dark-green hover:text-white transition duration-300 transform hover:scale-105">Proatividade</span>
+                    <span class="bg-light-green text-black px-6 py-3 rounded-full shadow-md hover:bg-dark-green hover:text-white transition duration-300 transform hover:scale-105">Resiliência</span>
+                    <span class="bg-light-green text-black px-6 py-3 rounded-full shadow-md hover:bg-dark-green hover:text-white transition duration-300 transform hover:scale-105">Trabalho em Equipe</span>
+                    <span class="bg-light-green text-black px-6 py-3 rounded-full shadow-md hover:bg-dark-green hover:text-white transition duration-300 transform hover:scale-105">Empatia</span>
+                    <span class="bg-light-green text-black px-6 py-3 rounded-full shadow-md hover:bg-dark-green hover:text-white transition duration-300 transform hover:scale-105">Resolução de Conflitos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiências Section -->
+        <section id="experiencia" class="py-16 md:py-24 bg-white text-black">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-dark-green">Experiência</h2>
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-light-green h-full hidden md:block"></div>
+
+                    <!-- Experience Item 1: Voluntário no Comunidade virtuais UFBA -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12 hidden md:block"></div>
+                        <div class="z-20 flex items-center order-1 bg-light-green shadow-xl w-8 h-8 rounded-full hidden md:flex">
+                            <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+                        </div>
+                        <div class="order-1 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 w-full md:w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-xl mb-2 text-dark-green">Voluntário - Comunidade Virtuais UFBA</h3>
+                            <p class="text-sm text-gray-600">03/03/2023 – 12/07/2023</p>
+                            <p class="text-base leading-snug text-gray-800 mt-2">Participei de um projeto de pesquisa sobre as indústrias de games, investigando e analisando o cenário de games do Brasil através dos censos de 2014, 2018 e 2022. Elaborei planilhas e organizei dados, entre outras atividades.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 2: Voluntário da Rede pesquisa onda digital UFBA -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12 hidden md:block"></div>
+                        <div class="z-20 flex items-center order-1 bg-light-green shadow-xl w-8 h-8 rounded-full hidden md:flex">
+                            <h1 class="mx-auto font-semibold text-lg text-white">2</h1>
+                        </div>
+                        <div class="order-1 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 w-full md:w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-xl mb-2 text-dark-green">Voluntário - Rede Pesquisa Onda Digital UFBA</h3>
+                            <p class="text-sm text-gray-600">01/07/2023 – 01/07/2024</p>
+                            <p class="text-base leading-snug text-gray-800 mt-2">Participei da equipe técnica do Onda Digital, rede de pesquisa e extensão do instituto de matemática e estatística, realizando atividades técnicas de computadores como manutenção, limpeza e instalação de programas, além de colaborar para o desenvolvimento da rede de pesquisa com outras atividades relacionadas à área da computação e software livre.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 3: Estagiário da Empresa Prepara cursos -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12 hidden md:block"></div>
+                        <div class="z-20 flex items-center order-1 bg-light-green shadow-xl w-8 h-8 rounded-full hidden md:flex">
+                            <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+                        </div>
+                        <div class="order-1 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 w-full md:w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-xl mb-2 text-dark-green">Estágio - Prepara Cursos (TI)</h3>
+                            <p class="text-sm text-gray-600">13/01/2024 – 26/04/2024</p>
+                            <p class="text-base leading-snug text-gray-800 mt-2">Estágio na área de TI em empresa de cursos profissionalizantes, atuando como suporte técnico, realizando manutenções, check-ups e instalações de programas, e sendo monitor dos alunos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 4: Estagiário da Empresa BTS Desenvolvimento de sistemas -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12 hidden md:block"></div>
+                        <div class="z-20 flex items-center order-1 bg-light-green shadow-xl w-8 h-8 rounded-full hidden md:flex">
+                            <h1 class="mx-auto font-semibold text-lg text-white">4</h1>
+                        </div>
+                        <div class="order-1 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 w-full md:w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-xl mb-2 text-dark-green">Estágio - BTS Desenvolvimento de Sistemas</h3>
+                            <p class="text-sm text-gray-600">01/05/2024 – 01/07/2024</p>
+                            <p class="text-base leading-snug text-gray-800 mt-2">Estágio na área de TI na BTS Desenvolvimento de Sistemas, atuando como suporte técnico, auxiliando e resolvendo problemas com auxílio do SQL-Server e conceitos básicos em Redes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 5: Estagiário da Empresa TVE-IRDEB Desenvolvimento web -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12 hidden md:block"></div>
+                        <div class="z-20 flex items-center order-1 bg-light-green shadow-xl w-8 h-8 rounded-full hidden md:flex">
+                            <h1 class="mx-auto font-semibold text-lg text-white">5</h1>
+                        </div>
+                        <div class="order-1 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 w-full md:w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-xl mb-2 text-dark-green">Estágio - TVE-IRDEB (Dev Web)</h3>
+                            <p class="text-sm text-gray-600">Desde 05/08/2024 – 30/07/2025</p>
+                            <p class="text-base leading-snug text-gray-800 mt-2">Atuo como estagiário em desenvolvimento web na TVE Bahia pelo IRDEB. Minhas responsabilidades incluem o desenvolvimento de funcionalidades para as plataformas digitais da emissora, otimização de interfaces responsivas, aprimoramento da acessibilidade e performance dos sites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos Section -->
+        <section id="projetos" class="py-16 md:py-24 bg-gray-100 text-black">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-dark-green">Meus Projetos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Flor da Chapada - Cardápio Online -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-semibold mb-3 text-light-green">Flor da Chapada - Cardápio Online</h3>
+                            <p class="text-gray-700 mb-4">Plataforma completa de cardápio digital desenvolvida com Vue.js no frontend e Node.js no backend. Usuário pode criar conta, adicionar itens ao carrinho e realizar pedidos. Sistema de login, controle de sessões e gerenciamento via localStorage. Área administrativa para adicionar, editar e remover itens do cardápio. Backend hospedado no Render, banco de dados MongoDB.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">Vue.js</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">Node.js</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">MongoDB</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">localStorage</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">Render</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/Deivisnan/Pagina_da_liga_LIAO" target="_blank" class="inline-block bg-light-green text-black font-semibold py-2 px-4 rounded-full hover:bg-dark-green hover:text-white transition duration-300 mt-auto">
+                            <i class="fab fa-github mr-2"></i>Ver Código
+                        </a>
+                    </div>
+
+                    <!-- Liga de Inteligência Artificial – UFBA (LIAO) -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-semibold mb-3 text-light-green">Liga de Inteligência Artificial – UFBA (LIAO)</h3>
+                            <p class="text-gray-700 mb-4">Site institucional da Liga de Inteligência Artificial do Instituto de Computação da UFBA. Desenvolvi o layout da página focado em identidade visual moderna. Inclui informações dos membros e dashboards interativos. Organização responsiva com navegação fluida e destaque para atividades da liga.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">HTML</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">CSS</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">JavaScript</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">Responsivo</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/Deivisnan/Pagina_da_liga_LIAO" target="_blank" class="inline-block bg-light-green text-black font-semibold py-2 px-4 rounded-full hover:bg-dark-green hover:text-white transition duration-300 mt-auto">
+                            <i class="fab fa-github mr-2"></i>Ver Código
+                        </a>
+                    </div>
+
+                    <!-- Cardápio Açaí – Flor da Chapada -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-semibold mb-3 text-light-green">Cardápio Açaí – Flor da Chapada</h3>
+                            <p class="text-gray-700 mb-4">Página leve e dinâmica, feita em HTML, CSS e JavaScript. Gera nomes criativos para açaís utilizando a API do Gemini. Captura a localização do usuário no momento do pedido. Utiliza localStorage para manter as preferências e histórico local do cliente. Ideal para acessos rápidos e práticos via mobile.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">HTML</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">CSS</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">JavaScript</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">Gemini API</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">localStorage</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/Deivisnan/Cardapio-acai" target="_blank" class="inline-block bg-light-green text-black font-semibold py-2 px-4 rounded-full hover:bg-dark-green hover:text-white transition duration-300 mt-auto">
+                            <i class="fab fa-github mr-2"></i>Ver Código
+                        </a>
+                    </div>
+
+                    <!-- Landing Page – Garagem -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-semibold mb-3 text-light-green">Landing Page – Garagem</h3>
+                            <p class="text-gray-700 mb-4">Criação de uma landing page profissional para a empresa Garage. Estrutura limpa e moderna com foco em apresentação institucional. Projeto responsivo com destaque visual, CTA estratégico e informações de contato.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">HTML</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">CSS</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">JavaScript</span>
+                                <span class="bg-dark-green text-white text-xs px-3 py-1 rounded-full">Responsivo</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/Deivisnan/Garage_Page" target="_blank" class="inline-block bg-light-green text-black font-semibold py-2 px-4 rounded-full hover:bg-dark-green hover:text-white transition duration-300 mt-auto">
+                            <i class="fab fa-github mr-2"></i>Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educação Section -->
+        <section id="educacao" class="py-16 md:py-24 bg-white text-black">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-dark-green">Educação</h2>
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-2xl font-semibold mb-2 text-light-green">Sistemas de Informação</h3>
+                        <p class="text-lg text-gray-800">Universidade Federal da Bahia (UFBA)</p>
+                        <p class="text-md text-gray-600">2023 – 2027 (Previsão de Conclusão)</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-2xl font-semibold mb-2 text-light-green">Bacharelado Interdisciplinar em Ciência & Tecnologia</h3>
+                        <p class="text-lg text-gray-800">Universidade Federal da Bahia (UFBA)</p>
+                        <p class="text-md text-gray-600">2020 – 2024</p>
+                    </div>
+                    <!-- Curso Técnico adicionado aqui -->
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-2xl font-semibold mb-2 text-light-green">Desenvolvimento de Sistemas</h3>
+                        <p class="text-lg text-gray-800">SENAI-BA</p>
+                        <p class="text-md text-gray-600">2024 – 2025</p>
+                    </div>
+                </div>
+
+                <h2 class="text-4xl font-bold text-center mt-16 mb-12 text-dark-green">Cursos Complementares</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-code text-light-green text-2xl mr-4"></i>
+                        <span class="text-lg text-gray-800">Front-End (Alura)</span>
+                    </div>
+                    <div class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-book text-light-green text-2xl mr-4"></i>
+                        <span class="text-lg text-gray-800">CC50 Harvard</span>
+                    </div>
+                    <div class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-brain text-light-green text-2xl mr-4"></i>
+                        <span class="text-lg text-gray-800">Fundamentos de IA para Devs (DIO)</span>
+                    </div>
+                    <div class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-laptop-code text-light-green text-2xl mr-4"></i>
+                        <span class="text-lg text-gray-800">Trilha Digital Coders 24 Front End (ADA TECH)</span>
+                    </div>
+                    <div class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-shopping-cart text-light-green text-2xl mr-4"></i>
+                        <span class="text-lg text-gray-800">E-Commerce e Gestão Comercial (Open Academy Santander)</span>
+                    </div>
+                     <div class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-terminal text-light-green text-2xl mr-4"></i>
+                        <span class="text-lg text-gray-800">AI Python Backend Developer (DIO)</span>
+                    </div>
+                    <div class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-language text-light-green text-2xl mr-4"></i>
+                        <span class="text-lg text-gray-800">Profici-Inglês (UFBA)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="py-16 md:py-24 bg-black text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-light-green">Contato</h2>
+                <div class="flex justify-center items-start">
+                    <!-- Informações de Contato e Links -->
+                    <div class="w-full md:w-2/3 bg-gray-900 p-8 rounded-lg shadow-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-6 text-white">Informações e Redes</h3>
+                        <div class="space-y-4">
+                            <p class="flex items-center justify-center text-lg text-gray-300">
+                                <i class="fas fa-map-marker-alt text-light-green mr-3"></i> Lauro de Freitas - BA, Brasil
+                            </p>
+                            <p class="flex items-center justify-center text-lg text-gray-300">
+                                <i class="fas fa-envelope text-light-green mr-3"></i> bispodeivisnan@gmail.com
+                            </p>
+                            <p class="flex items-center justify-center text-lg text-gray-300">
+                                <i class="fas fa-phone text-light-green mr-3"></i> (71) 99158-9818
+                            </p>
+                        </div>
+                        <div class="mt-8 flex justify-center space-x-6">
+                            <a href="https://github.com/DeivisnanBispo" target="_blank" class="text-light-green hover:text-white transition duration-300 transform hover:scale-110">
+                                <i class="fab fa-github text-4xl"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/deivisnan-bispo" target="_blank" class="text-light-green hover:text-white transition duration-300 transform hover:scale-110">
+                                <i class="fab fa-linkedin text-4xl"></i>
+                            </a>
+                            <a href="http://lattes.cnpq.br/2340969281217677" target="_blank" class="text-light-green hover:text-white transition duration-300 transform hover:scale-110">
+                                <img src="https://img.icons8.com/ios-filled/50/32CD32/lattes.png" alt="Lattes Icon" class="w-10 h-10 filter brightness-125">
+                                <span class="sr-only">Lattes</span> <!-- Adicionado para acessibilidade -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-green text-white py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 Deivisnan Bispo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu after clicking a link
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Toggle mobile menu visibility
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside (optional, but good UX)
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Set up custom Tailwind colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': 'var(--color-dark-green)',
+                        'light-green': 'var(--color-light-green)',
+                        'black': 'var(--color-black)',
+                        'white': 'var(--color-white)',
+                    },
+                    keyframes: {
+                        'fade-in-up': {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fade-in-up 1s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
 
